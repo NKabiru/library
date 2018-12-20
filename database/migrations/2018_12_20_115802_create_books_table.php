@@ -19,7 +19,6 @@ class CreateBooksTable extends Migration
             $table->string('isbn');
             $table->string('year');
             $table->string('blurb');
-            $table->unsignedInteger('quantity')->default(1);
             $table->unsignedInteger('user_id')->nullable();
             $table->timestamps();
         });
