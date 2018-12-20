@@ -18,7 +18,10 @@ $factory->define(App\User::class, function (Faker $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+        'password' => '$2y$10$iitwYaenXOONRMY5TIBRruRRzxqPwRzguucHMh99kYmcA2mWuFgPu', // password
         'remember_token' => str_random(10),
+        'role_id' => function () {
+            return factory('App\Role')->create()->id;
+        },
     ];
 });
