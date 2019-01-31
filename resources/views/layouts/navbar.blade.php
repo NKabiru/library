@@ -12,7 +12,8 @@
     </div>
     <div class="navbar-menu">
         <div class="navbar-start">
-            <a href="#" class="navbar-item">Books</a>
+            <a href="{{ route('books.index') }}" class="navbar-item">Library</a>
+            <a href="#" class="navbar-item">Reviews</a>
         </div>
 
         <div class="navbar-end">
@@ -28,6 +29,7 @@
 
                         <div class="navbar-dropdown">
                             <a href="#" class="navbar-item">Profile</a>
+                            <a href="#" class="navbar-item">Reading List</a>
 
                             <a href="{{ route('logout') }}" class="navbar-item" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

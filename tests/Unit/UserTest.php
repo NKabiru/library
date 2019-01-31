@@ -15,7 +15,7 @@ class UserTest extends TestCase
     protected function setUp()
     {
         parent::setUp();
-        
+
         $this->user = factory('App\User')->create();
     }
 
@@ -29,12 +29,6 @@ class UserTest extends TestCase
     public function a_user_can_have_many_reviews()
     {
         $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $this->user->reviews);
-    }
-
-    /** @test */
-    public function a_user_belongs_to_a_role()
-    {
-        $this->assertInstanceOf('App\Role', $this->user->role);
     }
 
 
