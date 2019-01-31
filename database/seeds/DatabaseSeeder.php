@@ -11,8 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call([
-             RoleTableSeeder::class,
-         ]);
+        factory('App\Role')->create(['name' => 'user', 'description' => 'Normal User']);
+        factory('App\Book', 10)->create();
+        factory('App\User', 10)->create();
     }
 }
